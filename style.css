@@ -1,0 +1,119 @@
+body {
+    font-family: 'Courier New', Courier, monospace; /* Шрифт, похожий на VS Code */
+    background-color: #1e1e1e; /* Темный фон */
+    color: #d4d4d4; /* Светлый текст */
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #252526; /* Темный контейнер */
+    border-radius: 5px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+    background: #007acc; /* Цвет заголовка */
+    color: white;
+    border-radius: 5px;
+}
+
+h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+h2 {
+    color: #9cdcfe; /* Цвет заголовков секций */
+    border-bottom: 1px solid #555; /* Разделительная линия */
+    padding-bottom: 10px;
+}
+
+.content {
+    display: flex; /* Используем flexbox для размещения меню и контента */
+}
+
+.sidebar {
+    width: 200px; /* Ширина бокового меню */
+    background-color: #333333; /* Цвет фона для меню */
+    padding: 15px;
+    border-radius: 5px;
+    margin-right: 20px; /* Отступ от основного контента */
+}
+
+.sidebar h2 {
+    color: #9cdcfe; /* Цвет заголовка меню */
+}
+
+.sidebar ul {
+    list-style-type: none; /* Убираем маркеры */
+    padding: 0;
+}
+
+.sidebar li {
+    margin: 10px 0;
+    transition: background-color 0.3s ease; /* Плавный переход цвета фона */
+}
+
+.sidebar li:hover {
+    background-color: #007acc; /* Цвет фона при наведении */
+}
+
+.sidebar a {
+    color: #d4d4d4; /* Цвет ссылок */
+    text-decoration: none; /* Убираем подчеркивание */
+    transition: color 0.3s ease; /* Плавный переход цвета текста */
+}
+
+.sidebar a:hover {
+    color: white; /* Цвет текста при наведении */
+}
+
+main {
+    flex-grow: 1; /* Основной контент занимает оставшееся пространство */
+}
+
+.patch {
+    background: #333333; /* Цвет фона для секций патчей */
+    margin: 15px 0;
+    padding: 15px;
+    border-radius: 5px;
+    opacity: 0; /* Начальная непрозрачность */
+    transform: translateY(20px); /* Начальное положение */
+    animation: fadeInUp 0.5s forwards; /* Анимация появления */
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1; /* Полная непрозрачность */
+        transform: translateY(0); /* Конечное положение */
+    }
+}
+
+.update {
+    margin-top: 10px; /* Отступ сверху для обновлений */
+}
+
+.update h3 {
+    color: #9cdcfe; /* Цвет заголовков обновлений */
+}
+
+ul {
+    list-style-type: none; /* Убираем маркеры */
+    padding: 0;
+}
+
+li {
+    padding: 5px 0;
+}
+
+footer {
+    text-align: center;
+    margin-top: 20px;
+    color: #777;
+}
